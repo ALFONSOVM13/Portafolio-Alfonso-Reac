@@ -1,0 +1,134 @@
+/* skills.scss */
+
+@import 'variables';
+
+#section2 {
+    background-color: $background2;
+    background-image: url('../assets/back-section2.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+
+    @media (max-width: 768px) {
+        justify-content: flex-start;
+        padding: 20px; 
+        height: auto; 
+        min-height: 100vh;
+        background-size: cover;
+        flex-direction: column;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        font-family: $fuente1;
+        h1{
+            font-size: 70px;
+            color: $background1;
+            text-decoration: underline;
+        }
+
+    }
+}
+
+.logo {
+    max-width: 100px;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+        flex-direction: column; 
+        gap: 30px; 
+        align-items: center; 
+        margin-top: 30px; 
+    }
+}
+
+.cards .red {
+    background-color: rgb(130, 208, 102);
+}
+
+.cards .blue {
+    background-color: $background1;
+}
+
+.cards .green {
+    background-color: $secondary;
+}
+
+.cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+    padding: 50px;
+
+    @media (max-width: 768px) {
+        width: 350px; 
+        height: 350px;
+        padding: 15px; 
+    }
+}
+
+.cards .card p.tip {
+    font-size: 3em;
+    font-weight: 700;
+    font-family: 'Lobster', sans-serif;
+
+    @media (max-width: 768px) {
+        font-size: 2em; 
+    }
+}
+
+.cards .card p.second-text {
+    font-size: .9em;
+    font-family: $fuente2;
+    font-weight: bolder;
+}
+
+.cards .card:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.cards:hover > .card:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+}
+
+
+@media (max-width: 820px) {
+    #section2 {
+        padding: 20px;
+    }
+
+    .cards .card {
+        width: 300px;
+        height: 300px;
+        padding: 10px;
+    }
+
+    .cards .card p.tip {
+        font-size: 1.5em;
+    }
+}

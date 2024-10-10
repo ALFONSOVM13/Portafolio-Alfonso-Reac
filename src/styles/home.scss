@@ -1,0 +1,57 @@
+@import 'variables';
+
+.logo {
+    position: absolute;
+    max-width: 100px;
+    top: 20px;
+    margin: 20px;
+}
+.caja1{
+    padding-left: 30px;
+}
+
+.foto-perfil {
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    height: 650px;
+}
+
+.titulo {
+    color: $primary;
+    font-size: 100px;
+    margin-bottom: 100px;
+    font-family: 'Lobster', sans-serif;
+}
+
+.h4 {
+    color: $primary;
+}
+
+@media (max-width: 768px) {
+    .foto-perfil {
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 400px;
+    }
+    .titulo {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+    .mb-20 {
+        margin-bottom: 10px;
+    }
+}
+
+.bg-custom {
+    background-color: $background1;
+}
+
+.bg-custom2 {
+    background-color: $primary;
+}
+
+.text-custom {
+    color: $primary;
+}
